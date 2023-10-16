@@ -59,7 +59,7 @@ class PlaylistsService {
         const result = await this.pool.query(query);
 
         if (!result.rowCount) {
-            throw new NotFoundError('catatan tidak ditemukan');
+            throw new NotFoundError('playlist tidak ditemukan');
         }
 
         const notesOwner = result.rows[0].owner;

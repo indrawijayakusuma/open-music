@@ -19,7 +19,7 @@ class PlaylistHandler {
         }).code(201);
     }
 
-    async getPlaylistHandler(request, h) {
+    async getPlaylistHandler(request) {
         const { id: owner } = request.auth.credentials;
         const playlists = await this.service.getPlaylist(owner);
         return {
