@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable camelcase */
 const mapDBAlbumToModel = ({
     id,
@@ -7,6 +8,15 @@ const mapDBAlbumToModel = ({
     id,
     name,
     year,
+});
+
+const mapDBPlaylistActivity = ({
+    username, title, action, time,
+}) => ({
+    username,
+    title,
+    action,
+    time,
 });
 
 const playlistSongDBToModel = ({
@@ -36,4 +46,6 @@ const mapSongDBToModel = ({
     duration,
     albumId: album_id,
 });
-module.exports = { mapDBAlbumToModel, mapSongDBToModel, playlistSongDBToModel };
+module.exports = {
+    mapDBAlbumToModel, mapSongDBToModel, playlistSongDBToModel, mapDBPlaylistActivity,
+};
